@@ -45,7 +45,8 @@
   [1, 2, 3, 3].uniq!
   ```
   ```ruby
-  Ans:任何加 ! 的方法代表呼叫該方法的物件最後會被改變
+  Ans:
+  任何加 ! 的方法代表呼叫該方法的物件最後會被改變
   arr = [1, 2, 3, 3]
   arr.uniq
   # =>[1, 2, 3]
@@ -71,7 +72,8 @@
   ```
 會執行出什麼結果？ 請試試不用 irb 算出結果
   ```ruby
-  Ans:結果為true
+  Ans:
+  結果為true
   (1 > 3) => false
   (true == true) => true
   (false && true) => false
