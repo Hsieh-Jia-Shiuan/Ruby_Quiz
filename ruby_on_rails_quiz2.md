@@ -10,10 +10,10 @@
   ```
   ```ruby
   Ans:
-  a塞入整數1的數值
+  變數a塞入整數1的數值
   實例變數a塞入整數2的數值
   類別變數a塞入整數5的數值
-  User的class實體化被記在user裡面
+  User的class實體化，並被記在user裡面
   取得user裡面name得值
   將user裡面name的值改為Joe
   ```
@@ -33,6 +33,7 @@
   end
 
   Taiwanese.new.language
+  # =>can speak chinese
   ```
 
 3. 請說明 class variable 和 instance variable 之間的差別
@@ -101,12 +102,32 @@
 
 10. 若今天有一個 class 有 include 一個 module，他的 parent class 和 sub class 是否可以使用該 module 裡的 method?
   ```ruby
-  Ans:是
+  Ans:否
+  module Language
+    def language
+      puts "can speak chinese"
+    end
+  end
+  
+  class Person 
+    include Language
+  
+    def language 
+      puts "just can speak English"
+    end
+  end
+  
+  class Taiwanese < Person
+    
+  end
+  
+  Taiwanese.new.language
+  # =>just can speak English
   ```
 
 11. 請間單說明什麼是 Relational Database，什麼是 SQL
-  Ans:
   ```ruby
+  Ans:
   Relational Database（關聯式資料庫）
   SQL結構化查詢語言
   ```
