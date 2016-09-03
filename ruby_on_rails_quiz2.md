@@ -102,7 +102,7 @@
 
 10. 若今天有一個 class 有 include 一個 module，他的 parent class 和 sub class 是否可以使用該 module 裡的 method?
   ```ruby
-  Ans:否
+  Ans:parent class不能使用，sub class可以使用
   module Language
     def language
       puts "can speak chinese"
@@ -111,10 +111,6 @@
   
   class Person 
     include Language
-  
-    def language 
-      puts "just can speak English"
-    end
   end
   
   class Taiwanese < Person
@@ -122,12 +118,13 @@
   end
   
   Taiwanese.new.language
-  # =>just can speak English
+  # =>can speak chinese
   ```
 
 11. 請間單說明什麼是 Relational Database，什麼是 SQL
   ```ruby
   Ans:
-  Relational Database（關聯式資料庫）
-  SQL結構化查詢語言
+  Relational Database（關聯式資料庫），將資料建立一組關係模型，再依此基礎建出系統架構在關聯式資料表中，將每個資料表視為一個實體，每個實體則有屬性描述之，而這些屬性就稱為鍵值。
+
+  Structural Query Language (SQL) 結構化查詢語言，用於資料庫中的標準資料查詢語言。
   ```
